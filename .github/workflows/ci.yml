@@ -12,11 +12,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run CMake
       run: cmake -DCMAKE_BUILD_TYPE=Release .
     - name: Run Build
       run: cmake --build .
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
